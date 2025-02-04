@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Valentine's Day Ask</title>
+<style>
+body {
+background-image: url('https://images.pexels.com/photos/1520864/pexels-photo-1520864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=3');
+background-size: cover;
+background-position: center;
+font-family: Arial, sans-serif;
+text-align: center;
+}
+.container {
+width: 80%;
+margin: 40px auto;
+background-color: #fff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+transition: transform 0.5s;
+position: relative;
+}
+.container:hover {
+transform: scale(1.1);
+}
+.ribbon-top {
+position: absolute;
+top: -20px;
+left: 50%;
+transform: translateX(-50%);
+background-color: #ff99cc;
+padding: 10px;
+border-radius: 5px 5px 0 0;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ribbon-side {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: #ff99cc;
+padding: 10px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ribbon-side.left {
+left: -20px;
+}
+.ribbon-side.right {
+right: -20px;
+}
+.question {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 20px;
+color: #ff99cc;
+animation: heartbeat 1s infinite;
+}
+.buttons {
+margin-top: 20px;
+}
+.button {
+width: 40%;
+margin: 10px;
+padding: 10px;
+border: none;
+border-radius: 5px;
+background-color: #ff99cc;
+color: #fff;
+cursor: pointer;
+transition: background-color 0.5s;
+}
+.button:hover {
+background-color: #ff69b4;
+}
+#result {
+font-size: 24px;
+font-weight: bold;
+margin-top: 20px;
+animation: fade-in 1s;
+}
+@keyframes heartbeat {
+0% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.2);
+}
+100% {
+transform: scale(1);
+}
+}
+@keyframes fade-in {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="ribbon-top">Be Mine!</div>
+<div class="ribbon-side left">XOXO</div>
+<div class="ribbon-side right">Forever Yours</div>
+<div class="question">Will You Be My Valentine?</div>
+<div class="buttons">
+<button class="button" id="yes-btn">Yes</button>
+<button class="button" id="no-btn">No</button>
+</div>
+<div id="result"></div>
+</div>
+
+```<script>
+	const yesBtn = document.getElementById('yes-btn');
+	const noBtn = document.getElementById('no-btn');
+	const resultDiv = document.getElementById('result');
+
+	yesBtn.addEventListener('click', () => {
+		resultDiv.innerHTML = 'Yay! You said yes!';
+		resultDiv.style.color = 'green';
+	});
+
+	noBtn.addEventListener('click', () => {
+		resultDiv.innerHTML = 'Aww, maybe next time!';
+		resultDiv.style.color = 'red';
+	});
+</script>
+```
+</body>
+</html>
+<ALOASK-SEPARATE-EDITORS><ALOASK-SEPARATE-EDITORS>
